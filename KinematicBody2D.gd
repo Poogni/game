@@ -75,9 +75,9 @@ func _physics_process(delta):
 	var collided  = $RayCast2D.get_collider()
 	if collided is MovableBlock:
 		if facing == "right":
-			collided.apply_central_impulse(Vector2(180,25))
+			collided.apply_central_impulse(Vector2(1800,25))
 		elif facing == "left":
-			collided.apply_central_impulse(Vector2(-180,25))
+			collided.apply_central_impulse(Vector2(-1800,25))
 
 	if jumped:
 		$Sprite.scale =lerp($Sprite.scale,Vector2(0.9,1.1),0.1)

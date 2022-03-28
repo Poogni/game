@@ -278,6 +278,7 @@ drag_margin_v_enabled = true
 editor_draw_limits = true
 
 [node name="portal" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( -110, 411 )
 
 [node name="Area" type="Node2D" parent="."]
 position = Vector2( -28, 56 )
@@ -308,6 +309,7 @@ shape = SubResource( 12 )
 disabled = true
 
 [node name="RayCast2D" type="RayCast2D" parent="Test2"]
+visible = false
 position = Vector2( 9, 3 )
 enabled = true
 cast_to = Vector2( 0, 0 )
