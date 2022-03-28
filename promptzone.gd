@@ -5,6 +5,8 @@ var isin = false
 
 
 
+
+
 func _on_promptzone_body_entered(body):
 	
 	isin = true
@@ -26,3 +28,6 @@ func _on_promptzone_body_exited(body):
 	isin = false
 	
 	pass # Replace with function body.
+	
+	
+
