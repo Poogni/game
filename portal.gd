@@ -3,8 +3,9 @@ extends Area2D
 var open = 1
 
 
+signal tped(tplocation)
 
-
+var location = Vector2(100,100)
 
 
 
