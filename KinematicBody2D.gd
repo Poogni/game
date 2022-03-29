@@ -102,3 +102,11 @@ func _on_promptzone_body_entered(body):
 	print("Entered")
 	
 	pass # Replace with function body.
+
+
+func _on_portal_tped(tplocation):
+	
+	
+	
+	print("Tping")
+	print(tplocation)
