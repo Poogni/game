@@ -105,8 +105,5 @@ func _on_promptzone_body_entered(body):
 
 
 func _on_portal_tped(tplocation):
-	
-	
-	
-	print("Tping")
-	print(tplocation)
+	position.x = tplocation.x
+	position.y = tplocation.y
