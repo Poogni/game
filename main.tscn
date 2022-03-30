@@ -278,7 +278,7 @@ drag_margin_v_enabled = true
 editor_draw_limits = true
 
 [node name="portal" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( -110, 411 )
+position = Vector2( 1587, 475 )
 
 [node name="Area" type="Node2D" parent="."]
 position = Vector2( -28, 64 )
