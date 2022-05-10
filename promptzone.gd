@@ -2,32 +2,24 @@ extends Area2D
 
 
 var isin = false
-
-
-
+var player = "res://Player.tscn"
 
 
 func _on_promptzone_body_entered(body):
 	
-	isin = true
-	
-	$prompt/AnimationPlayer.play("New Anim")
-	
-	print("BOdy entered on that other node")
-	
+	if body.name == "Player":
+		isin = true
+		$prompt/AnimationPlayer.play("New Anim")
+		print("Body entered")
 	
 	
 	
-	pass 
 
 
 func _on_promptzone_body_exited(body):
-	
-	$prompt/AnimationPlayer.play_backwards("New Anim")
-	
-	isin = false
-	
-	pass # Replace with function body.
+	if body.name == "Player":
+		$prompt/AnimationPlayer.play_backwards("New Anim")
+		isin = false
 	
 	
 
