@@ -7,7 +7,7 @@ var speed = 100
 var gravity = 13
 var status = "state"
 const UP = Vector2(0,-1)
-var jumppower = 300
+var jumppower = 350
 var inertia = 35
 var facing = "direction"
 var offset = -30
@@ -48,6 +48,7 @@ func get_jumpinput():
 	
 
 func _physics_process(delta):
+
 	if is_on_floor():
 		$Sprite.scale = lerp($Sprite.scale ,Vector2(1,1),0.1)
 		if jumped:
