@@ -27,6 +27,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 16 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Idle"
@@ -131,7 +143,7 @@ graph_offset = Vector2( -91.5026, -47.9247 )
 
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 material = SubResource( 19 )
-position = Vector2( 202, 194 )
+position = Vector2( 202, 195 )
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
 

@@ -11,13 +11,13 @@ var location = Vector2(-28,64)
 func openandclose():
 	if open == 1 :
 		if Input.is_action_just_pressed("ui_accept"):
-			$Sprite.set_frame(0)
+			$AnimationPlayer.play("Open")
 			open -= 1
 		elif Input.is_action_just_pressed("Tp"):
 			emit_signal("tped",location)
 	elif open == 0:
 		if Input.is_action_just_pressed("ui_accept"):
-			$Sprite.set_frame(1)
+			$AnimationPlayer.play_backwards("Open")
 			open += 1
 
 func _physics_process(delta):

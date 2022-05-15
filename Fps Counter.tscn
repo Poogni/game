@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ColorRect.gd" type="Script" id=1]
+
+[node name="ColorRect" type="ColorRect"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 13.0
+margin_right = 43.0
+margin_bottom = 27.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )

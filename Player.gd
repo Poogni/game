@@ -3,11 +3,11 @@ extends KinematicBody2D
 
 
 var velocity = Vector2(0,0)
-var speed = 100
+var speed = 150
 var gravity = 13
 var status = "state"
 const UP = Vector2(0,-1)
-var jumppower = 350
+var jumppower = 400
 var inertia = 35
 var facing = "direction"
 var offset = -30
