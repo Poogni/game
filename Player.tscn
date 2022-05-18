@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://game assets/Blue guy/sprite sheet.png" type="Texture" id=2]
@@ -141,6 +141,9 @@ graph_offset = Vector2( -91.5026, -47.9247 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=17]
 
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 5.75, 6.75 )
+
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 material = SubResource( 19 )
 position = Vector2( 202, 195 )
@@ -165,7 +168,7 @@ shape = SubResource( 1 )
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( -0.5, 5 )
 rotation = -1.5708
-scale = Vector2( 1.385, 0.122 )
+scale = Vector2( 1.599, 0.122 )
 enabled = true
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -187,3 +190,12 @@ tree_root = SubResource( 16 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 17 )
+
+[node name="wall_bumper" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall_bumper"]
+position = Vector2( 14, 1.5 )
+shape = SubResource( 20 )
+
+[connection signal="body_entered" from="wall_bumper" to="." method="_on_wall_bumper_body_entered"]
+[connection signal="body_exited" from="wall_bumper" to="." method="_on_wall_bumper_body_exited"]

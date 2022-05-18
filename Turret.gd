@@ -49,7 +49,6 @@ func _physics_process(delta):
 	if isin == 1 and detected == 1:
 		
 		counter = 1
-		print()
 		track()
 		if countersec ==1:
 			
