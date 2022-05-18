@@ -20,7 +20,6 @@ func _physics_process(delta):
 			pickedup = true
 		elif Input.is_action_just_pressed("ui_accept"):
 			pickedup = false
-			
 	if pickedup:
 		$CollisionShape2D.disabled = true
 		$box_sprite/Outline.visible = false
@@ -39,16 +38,10 @@ func _physics_process(delta):
 			scale = Vector2(-1,1)
 		mode =RigidBody2D.MODE_STATIC
 		$CollisionShape2D.disabled = true
-		
-
 	elif !pickedup:
 		$box_sprite/Outline.visible = true
 		mode =RigidBody2D.MODE_RIGID
 		$CollisionShape2D.disabled = false
-	
-	print(tilemapcollided)
-	
-	
 
 
 
@@ -59,28 +52,14 @@ func _on_Detectplyr_body_entered(body):
 		pickup_able = true
 
 
-
 func _on_Detectplyr_body_exited(body):
 	if body.name == "Player":
 		$AnimationPlayer.play("Outline_Disappear")
 		pickup_able = false
-		
 
 
 func _on_Player_sided(faces):
 	towards = faces
-
-
-#func _on_bumper_body_entered(body):
-	#if body.name == "TileMap":
-#		tilemapcollided = true
-
-
-
-
-#func _on_bumper_body_exited(body):
-	#if body.name == "TileMap":
-		#tilemapcollided = false
 
 
 func _on_Player_bumpedtowall(status):
